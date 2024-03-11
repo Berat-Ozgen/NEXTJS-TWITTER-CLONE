@@ -12,6 +12,8 @@ import SidebarTweetButton from "./SidebarTweetButton";
 const Sidebar = () => {
   const { data: currentUser } = useCurrentUser();
 
+  console.log(currentUser);
+
   const items = [
     {
       icon: BsHouseFill,

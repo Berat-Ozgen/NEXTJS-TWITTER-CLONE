@@ -38,7 +38,7 @@ const RegisterModal = () => {
         name,
       });
 
-      toast.success("Account created");
+      toast.success("Hesap oluşturuldu");
 
       signIn("credentials", {
         email,
@@ -47,7 +47,7 @@ const RegisterModal = () => {
 
       registerModal.onClose();
     } catch (error) {
-      toast.error("Something went wrong");
+      toast.error("Bir şeyler yanlış gitti");
     } finally {
       setIsLoading(false);
     }
@@ -96,7 +96,7 @@ const RegisterModal = () => {
           "
         >
           {" "}
-          Sign in 5803
+          Sign in 
         </span>
       </p>
     </div>

@@ -18,7 +18,7 @@ const LoginModal = () => {
 
   const onSubmit = useCallback(async () => {
     try {
-      setIsLoading(true);
+      setIsLoading(false);
 
       await signIn("credentials", {
         email,
@@ -36,6 +36,9 @@ const LoginModal = () => {
   }, [email, password, loginModal]);
 
   const onToggle = useCallback(() => {
+    if (isLoading) {
+      return;
+    }
     loginModal.onClose();
     registerModal.onOpen();
   }, [loginModal, registerModal]);
