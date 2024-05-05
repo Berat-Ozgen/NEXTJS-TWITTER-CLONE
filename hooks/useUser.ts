@@ -9,6 +9,7 @@ const useUser = (userId: string) => {
      isLoading,
      mutate 
     } = useSWR(userId ?  `/api/users/${userId}`: null, fetcher);
+    console.log(userId)
   return {
     data,
     error,
