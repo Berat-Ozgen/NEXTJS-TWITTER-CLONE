@@ -19,7 +19,7 @@ const Avatar: React.FC<AvatarProps> = ({
   
   const onClick = useCallback((event:any) => {
     event.stopPropagation()
-    const url = `/user/${userId}`;
+    const url = `/users/${userId}`;
 
     router.push(url)
   },[router,userId])
@@ -35,7 +35,7 @@ const Avatar: React.FC<AvatarProps> = ({
       relative`
       }>
         {/* <Image
-          fill
+          fill 
           style={{
             objectFit: 'cover',
             borderRadius: '100%',

@@ -11,7 +11,6 @@ const useUser = (userId: string) => {
      isLoading,
      mutate 
     } = useSWR(userId ?  `/api/users/${userId}`:`/api/users` , fetcher);
-    console.log(userId)
   return {
     data,
     error,
